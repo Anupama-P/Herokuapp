@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "e64f333d-d87b-48e9-95e6-c838272fba70",
+		"name": "Herokuapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Token 58df6025747c57ad7f81a01725871f01fb515c05",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"dev\",\n    \"password\": \"Test123!\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/login/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login",
+						""
+					]
+				},
+				"description": "API to login to the app. This application uses token based authentication."
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "API to logout from app"
+			},
+			"response": []
+		},
+		{
+			"name": "creating sites",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Site 123\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/app/sites/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"sites",
+						""
+					]
+				},
+				"description": "API to create new site."
+			},
+			"response": []
+		},
+		{
+			"name": "listing sites",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/app/sites/?page=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"sites",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				},
+				"description": "API to list all sites and number of its entries."
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Individual Site ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/app/sites/2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"sites",
+						"2",
+						""
+					]
+				},
+				"description": "Get individual site details with its entries."
+			},
+			"response": []
+		},
+		{
+			"name": "Update Site ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Site Update\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/app/sites/2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"sites",
+						"2",
+						""
+					]
+				},
+				"description": "API to  update site name."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Site name",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/app/sites/2/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"sites",
+						"2",
+						""
+					]
+				},
+				"description": "API to delete site."
+			},
+			"response": []
+		},
+		{
+			"name": "Summary Sum",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/app/summary/sum/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"summary",
+						"sum",
+						""
+					]
+				},
+				"description": "API to return sum of values sitewise."
+			},
+			"response": []
+		},
+		{
+			"name": "Summary Average",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 44b335779a9748aad51000eb530ae8f53dd23dd9",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/app/summary/average/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"app",
+						"summary",
+						"average",
+						""
+					]
+				},
+				"description": "API to return average of values sitewise."
+			},
+			"response": []
+		}
+	]
+}
