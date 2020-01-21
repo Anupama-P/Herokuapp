@@ -3,7 +3,7 @@
 A simple django playground which aims to understand and implement REST Apis using Django Rest Framework.
 
 What I learnt?
-
+    -
     - DRF Authentication and Permissions
     - DRF Serializers
     - DRF Views and Viewsets
